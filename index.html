@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Player Management</title>
+</head>
+<body>
+  <h1>Player Management</h1>
+
+  <h2>Add Player</h2>
+  <form action="/addPlayer" method="POST">
+    <label for="first">First Name:</label>
+    <input type="text" id="first" name="name[first]" required><br>
+    <label for="last">Last Name:</label>
+    <input type="text" id="last" name="name[last]" required><br>
+    <label for="surname">Surname:</label>
+    <input type="text" id="surname" name="name[surname]" required><br>
+    <label for="description">Description:</label>
+    <input type="text" id="description" name="description" required><br>
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="DOB" required><br>
+    <label for="team">Team Name:</label>
+    <input type="text" id="team" name="team[0][name]" required><br>
+    <button type="submit">Add Player</button>
+  </form>
+
+  <h2>Remove Player</h2>
+  <form action="/removePlayer" method="POST">
+    <label for="playerId">Player ID:</label>
+    <input type="text" id="playerId" name="playerId" required><br>
+    <button type="submit">Remove Player</button>
+  </form>
+</body>
+</html>
